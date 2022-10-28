@@ -1,0 +1,7 @@
+Crea una galleria di immagine acquistabile
+
+Ogni immagine compresa di prezzo, titolo e quantità disponibili dovrà essere inserita in una "card"
+
+Dare la possibilità all'utente di inserire una nuova immagine con le relative proprietà
+
+ATT: le immagini devono essere dei link esterni
