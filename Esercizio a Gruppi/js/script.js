@@ -1,5 +1,5 @@
 
-
+var carte = document.getElementById("galleriaCarte");
 
 function Foto(url, titolo, prezzo, quantita){
     this.url = url;
@@ -8,7 +8,7 @@ function Foto(url, titolo, prezzo, quantita){
     this.quantita = quantita;
 
     this.cardFoto = function(){
-        var card = '<div class="col-3"><div class="card" style="width : 18rem;"><img src="' + this.url + '" class="card-img-top"><div class=card-body"><h5>' + this.titolo + '</h5><p>Prezzo: €' + this.prezzo + '</p><a href="#" class="btn btn-primary">Quantità rimanente: ' + this.quantita + '</button></div></div></div>'
+        var card = '<div class="col-3"><div class="card" style="width : 18rem;"><img src="' + this.url + '" class="card-img-top"><div class=card-body"><h5 class="card-title m-3">' + this.titolo + '</h5><p class="card-text m-3">Prezzo: €' + this.prezzo + '<br>Quantità rimanente: ' + this.quantita + '</p><a href="#" class="btn btn-primary m-3">Acquista</button></div></div></div>'
         return card;
     }
 }
@@ -24,7 +24,34 @@ var galleria = [
     new Foto("https://source.unsplash.com/300x300/?guitar", "Foto Chitarra", 2, 50)
 ]
 
-var carte = document.getElementById("galleriaCarte");
-galleria.forEach(foto => {
-    carte.innerHTML += foto.cardFoto();
-});
+
+function stampaFoto(){
+    carte.innerHTML = "";
+    galleria.forEach(foto => {
+        carte.innerHTML += foto.cardFoto();
+})
+};
+
+stampaFoto();
+
+function aggiungiFoto(){
+
+    var url = document.getElementById("linkImg").value;
+    var titolo = document.getElementById("titoloImg").value;
+    var prezzo = document.getElementById("prezzoImg").value;
+    var quantita = document.getElementById("quantitaImg").value;
+
+    var foto = new Foto(url, titolo, prezzo, quantita);
+    galleria.push(foto);
+
+    stampaFoto();
+
+    document.getElementById("linkImg").value = "";
+    document.getElementById("titoloImg").value = "";
+    document.getElementById("prezzoImg").value = "";
+    document.getElementById("quantitaImg").value = "";
+}
+
+
+var button = document.getElementById("button");
+button.onclick = aggiungiFoto;
