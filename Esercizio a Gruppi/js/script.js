@@ -9,8 +9,19 @@ function Foto(url, titolo, prezzo, quantita, id){
     this.id = id;
 
     this.cardFoto = function(){
-        var card = '<div class="col-3"><div class="card" style="width : 18rem;"><img src="' + this.url + '" class="card-img-top"><div class=card-body"><h5 class="card-title m-3">' + this.titolo + '</h5><p class="card-text m-3">Prezzo: €' + this.prezzo + '<br>Quantità rimanente: ' + this.quantita + '</p><a href="#" class="btn btn-primary m-3" onclick="sottrai(' + this.id + ')">Acquista</button></div></div></div>'
+        var card = '<div class="col-3"><div class="card mb-3" style="width : 18rem;"><img src="' + this.url + '" class="card-img-top"><div class=card-body"><h5 class="card-title m-3">' + this.titolo + '</h5><p class="card-text m-3">Prezzo: €' + this.prezzo + '</p><p class="card-text m-3" id="' + this.id + '"> Quantità rimanente: ' + this.quantita + '</p><div class="btn btn-primary m-3" onclick="sottraiFoto(' + this.id + ')">Acquista</div></div></div></div>'
         return card;
+
+    }
+
+    this.modificaQuantita = function(){
+        if(this.quantita <= 0){
+            var errore = document.getElementById(this.id);
+            errore.innerHTML = "<b style='color:red'>Articolo non disponibile</b>"
+        }else{
+            this.quantita--;
+            stampaFoto()
+        }
     }
 }
 
@@ -58,13 +69,12 @@ function aggiungiFoto(){
 }
 
 function sottraiFoto (indice){
-    if(galleria[indice].quantita <= 0){
-        alert("Articolo momentaneamente non disponibile");
-    }else{
-    galleria[indice].quantita--
-    stampaFoto()
+    galleria[indice].modificaQuantita();
+    //     alert("Articolo momentaneamente non disponibile");
+    // }else{
+    // galleria[indice].--
+    // stampaFoto()
     }
-}
 
 console.log(galleria[1].quantita);
 
