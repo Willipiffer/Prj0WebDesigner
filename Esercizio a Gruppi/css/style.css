@@ -1,0 +1,30 @@
+.addPoster {
+    border: solid 0.1rem;
+    border-color: lightgray;
+    border-radius: 30px;
+}
+
+.addPosterTitle {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+#linkImg {
+    margin: 0.5rem;
+}
+
+#titoloImg {
+    margin: 0.5rem;
+}
+
+#prezzoImg {
+    margin: 0.5rem;
+}
+
+#quantitaImg {
+    margin: 0.5rem;
+}
+
+#button {
+    margin: 2rem;
+}

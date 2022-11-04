@@ -27,7 +27,6 @@ var galleria = [
     new Foto("https://source.unsplash.com/300x300/?guitar", "Foto Chitarra", 2, 50, 7)
 ]
 
-
 function stampaFoto(){
     carte.innerHTML = "";
     galleria.forEach(foto => {
@@ -58,7 +57,7 @@ function aggiungiFoto(){
     console.log(galleria);
 }
 
-function sottrai(indice){
+function sottraiFoto (indice){
     if(galleria[indice].quantita <= 0){
         alert("Articolo momentaneamente non disponibile");
     }else{
