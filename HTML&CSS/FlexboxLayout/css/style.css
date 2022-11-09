@@ -1,0 +1,198 @@
+* {
+    /* Selettore * seleziona tutti gli elementi */
+    box-sizing: border-box;
+    /* Cambiamo il box model così che le dimensioni di margin/padding etc. non vengono cambiano le dimensioni dell'elemento */
+}
+
+b, strong, h1, h2, h3 {
+    /* Tutte le volte che ho un grassetto, forzo l'uso dello spessore 600
+    dato che è diverso dallo spessore default (700) così siamo sicuri non ci siano errori,
+    dato che non ho collegato il font con lo spessore 700 ma solo il 600 */
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Radio Canada', serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+
+/* HEADER */
+
+
+.mainHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+ul.mainMenu {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0%;
+}
+
+ul.mainMenu li {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+ul.mainMenu a {
+    color:  #e74438;
+    text-decoration: none;
+    font-weight: bold;
+    /* text-transform viene usato per modificare il testo senza andare a mettere le mani direttamente nel codice html: uppercase fa tutto maiuscolo, lowercase minuscolo, capitalize capitalizza il testo mettendo solo la prima lettera maiuscola */
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 6rem;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+/* HERO SECTION */
+
+#hero {
+    background: url(../img/kitchenTable.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
+    height: 36rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.claim h1 {
+    font-family: 'Caveat', serif;
+    font-size: 3.5rem;
+    color: #ce2b37;
+    text-shadow: 9px 10px 14px rgba(0,0,0,0.79);
+    margin-bottom: 0%;
+    margin-right: 5rem;
+}
+
+.claim p {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+/* SEZIONE RICETTE */
+
+#ricette {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ricetta {
+    display: flex;
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.ricettaImg {
+    width: 30%;
+}
+
+.ricettaTxt {
+    width: 70%;
+    padding-left: 1rem;
+}
+
+.ricettaTxt h2 {
+    margin-top: 0;
+}
+
+
+
+/* Sezione Bio */
+
+#bio {
+    background: rgb(206, 43, 55, 0.8);
+    color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+#bio .container {
+    display: flex;
+    align-items: center;
+}
+
+#bio a {
+    color: white;
+}
+
+.bioImg {
+    width: 30%;
+}
+
+.bioImg img {
+    border-radius: 50%;
+}
+
+.bioTxt {
+    width: 70%;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+
+.bioTxt h2 {
+    font-family: 'Caveat', serif;
+    font-size: 4rem;
+    margin: 0%;
+}
+
+/* FOOTER SECTION */
+
+.mainFooter {
+    background-color: #c9ccd3;
+    color: rgb(92, 91, 91);
+    /* padding-top: 2rem;
+    padding-bottom: 2rem; */
+
+    padding: 2rem 0; /* Stesso significato di sopra, primo valore è sopra/sotto e secondo sx/dx */ 
+
+    line-height: 1.5rem;
+}
+
+.mainFooter .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .contatti {
+    text-align: right;
+}
+
+a {
+    color: rgb(206, 43, 55);
+    text-decoration: none;
+    
+}
+
+.mainFooter i {
+    color: rgb(206, 43, 55);
+}
+
+.social {
+    font-size: 1.50rem;
+}

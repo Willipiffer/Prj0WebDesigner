@@ -1,0 +1,51 @@
+#box-1 {
+    background: orange;
+    /* height: 100px;
+    width: 200px; */
+    width: 20%;
+
+    /* Possiamo dare un ordine agli elementi dentro flexbox, così che vengano visualizzati prima di altri. Il numero minore ha priorità, ad esempio -1 */
+    order: -1;
+    /* Possiamo anche dare eccezioni ai figli in modo che si posizionino in maniera diversa da quella specificata nel genitore */
+    /* align-self: flex-end; */
+}
+
+#box-2 {
+    background: cyan;
+    /* height: 50px;
+    width: 200px; */
+    width: 60%;
+}
+
+#box-3 {
+    background-color: yellow;
+    /* height: 200px;
+    width: 300px; */
+    width: 20%;
+}
+
+.container {
+    /* display flex ci permette di usare flexbox, ovvero utilizzare comandi come justify content e align items per posizionare elementi dentro il genitore lungo due assi: la main axis (justify-items) di default orizzontale, e la cross axis (align-items) di default verticale*/
+    display: flex; 
+    /* row è di default, column invertisce le assi */
+    /* flex-direction: column; */
+    /* flex-start posiziona gli elementi all'inizio del genitore flex, ed è il default di justify content. space-between spazia gli elementi tra loro usando tutto lo spazio tra loro; space-evenly li spazia uniformemente lasciando lo stesso spazio anche tra loro e i lati del genitore. */
+    /* justify-content: space-between; */
+    /* stretch è il default di align-items e allunga gli elementi per far rientrare i loro contenuti al loro interno (ammesso che non impostiamo dimensioni fisse) center centra gli elementi*/
+    align-items: center;
+}
+
+.gallery {
+    /* di default, flexbox non va a capo */
+    display: flex;
+    /* flex-wrap: wrap; fa andare elementi "a capo" automaticamente se fuoriescono */
+    flex-wrap: wrap;
+}
+
+.galleryitem {
+    width: 20%;
+}
+
+.galleryitem img {
+    max-width: 100%;
+}

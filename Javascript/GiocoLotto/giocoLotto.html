@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco del Lotto!</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Benvenuti signore e signori al gioco del</h1>
+        <div class="imgWrapper"><img src="./img/lotto.png" alt="Logo Lotto"></div>
+        <p>Lasciate ogni speranza voi ch'entrate</p>
+        <p>Quanti numeri vuoi estrarre?</p>
+
+        <input type="text" id="numeroLotto" placeholder="Scegli un numero da 1 a 10">
+
+        <button onclick="lotto()">Conferma</button>
+
+        <br>
+
+        <div id="campoRisultato"></div>
+    </div>
+
+    <script src="./js/scriptLotto.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+body{
+    font-family: 'Gideon Roman', cursive, serif;
+}
+
+.container{
+    background-color: lightskyblue;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: auto;
+    margin: 100px auto 90px auto; */
+}
+
+/* Le dimensioni in percentuali sono relative al genitore - ex. se parliamo di un tag figlio di <body>, il 100% della larghezza sarà tutto lo spazio disponibile su schermo in orizzontale */
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* vh = altezza relativa alle dimensioni del viewport
+   vw = larghezza relativa alle dimensioni del viewport */
+
+.box{
+    background-color: rgb(38, 110, 174);
+    color: white;
+    font-weight: bold;
+    width: 50vw;
+    height: 20vh;
+    margin: auto;
+}
+
+/* rem = dimensione relativa alla dimensione base del font
+   em = dimensione relativa alla dimensione del font genitore */
+
+p {
+    color: rgb(242, 79, 8);
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.titleIntro{
+    font-size: 0.5em;
+}
+
+#mainMenu{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: rebeccapurple;
+}
+
+/* Possiamo usare anche selettori cosiddetti ereditari per selezionare solo elementi con specifici genitori. Selezioniamo prima il genitore e poi l'elemento figlio */
+
+#mainFooter p {
+    color:brown;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Possiamo anche concatenarli più volte */
+
+#mainFooter p a {
+    color: cornflowerblue;
+    font-size: 2rem;
+}
+
+/* Possiamo selezionare più elementi insieme separandoli con una virgola */
+
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

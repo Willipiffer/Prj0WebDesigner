@@ -1,0 +1,265 @@
+
+/* -------------------------------------------------------------------------- */
+/*                               Regole generali                              */
+/* -------------------------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #eeeded;
+    color: #222;
+
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3rem;
+
+
+    background: rgb(214,113,36);
+    background: linear-gradient(90deg, rgba(214,113,36,1) 40%, rgba(16,131,199,1) 60%);
+
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 1px black; */
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+img {
+    width: 100%; /* Allargo TUTTE le immagini al 100% delle dimensioni del contenitore*/
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+
+/* .headerWrapper {
+    display: flex;
+    justify-content: space-between; /* Ad estremi opposti */
+/*    align-items: center; /* Allineo centralmente lungo il cross axis (verticale) 
+} */
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 4rem;
+}
+
+.mainMenu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.mainMenu a {
+    text-decoration: none;
+}
+
+.mainMenu li {
+    padding: 0.5rem 0rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    HERO                                    */
+/* -------------------------------------------------------------------------- */
+
+#hero {
+    /* background:url(../img/background_mobile.jpg) no-repeat center center; <- Stessa cosa di quanto scritto sotto, in modo shortcut*/
+    background-image:url(../img/background_mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
+    height: 90vh;
+    /* Allineo il div callToAction */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* viene ereditata dal div callToAction */
+    margin-bottom: 3rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                               SEZIONE OFFERTE                              */
+/* -------------------------------------------------------------------------- */
+
+.offerta {
+    margin-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               SEZIONE GALLERY                              */
+/* -------------------------------------------------------------------------- */
+
+/* Dato che le immagini sono elementi inline block, hanno sia proprietà inline che block, il che significa che spesso hanno spazi indesiderati - possiamo risolvere questo utilizzando display:block per fare in modo che vengano utilizzati come elementi block puri */
+
+.galleryItem img {
+    display: block;
+    padding: 0.5rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+#mainFooter {
+    background: #0a4b71;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footerInfo, .footerSocial, .footerCredits {
+    margin-bottom: 1rem;
+}
+
+.footerWrapper .bi {
+    font-size: 1.5rem;
+}
+
+.footerWrapper a {
+    color: #e96a0a;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           STILI PER SCHERMI MEDI                           */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    
+    /* GALLERY */
+    .galleryWrapper {
+        display: flex;
+        flex-wrap: wrap; /* Quando finisce lo spazio, va a capo */
+    }
+
+    .galleryItem {
+        width: 50%;
+        /* padding: 0.5rem; */
+    }
+
+
+    /* MENU */
+    .mainMenu ul {
+        display: flex;
+    }
+
+    .mainMenu li {
+        padding: 1rem 1.5rem;
+    }
+
+    .headerWrapper {
+        display: flex;
+        justify-content: space-between; /* Ad estremi opposti */
+        align-items: center; /* Allineo centralmente lungo il cross axis (verticale) */
+    }
+
+    .footerWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .footerInfo {
+        width: 50%;
+        text-align: left;
+    }
+
+    
+    .footerSocial {
+        width: 100%;
+        order: 1;
+        text-align: left;
+    }
+
+    
+    .footerCredits {
+        width: 50%;
+        text-align: left;
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                          STILI PER SCHERMI GRANDI                          */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 992px) {
+    /* prima regole generali, poi più specifiche e che appaiono prima */
+    .container {
+        width: 70%;
+    }
+
+    #hero {
+        background-image: url(../img/background_desktop.jpg);
+    }
+
+    .offerta {
+        display: flex;
+    }
+
+    .offertaImg {
+        width: 33.3333%;
+    }
+
+    .offertaTxt {
+        width: 66.6666%;
+        padding-left: 1.5rem; /* Usiamo il margine interno "padding" dato che il margine esterno (margin) modificherebbe le dimensioni dell'elemento, mentre il padding con box-sizing: border-box non la aumenta */
+    }
+
+    .galleryItem {
+        width: 33.3333%;
+    }
+
+    .footerInfo {
+        width: 33.3333%;
+        text-align: left;
+    }
+
+    
+    .footerSocial {
+        width: 33.3333%;
+        order: 0; /* Riporto a 0 la proprietà order precedente */
+        text-align: center;
+    }
+
+    
+    .footerCredits {
+        width: 33.3333%;
+        text-align: right;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                    STILI PER SCHERMI ANCORA PIU' GRANDI!                   */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1200px) {
+    .galleryItem {
+        width: 25%;
+    }
+}
+
+

@@ -1,0 +1,57 @@
+/* Come nell'attributo style, qui si usa il linguaggio CSS */
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 150%;
+    margin: 70px;
+    text-align: center;
+    line-height: 150%;
+}
+
+/* Usando il cancelletto possiamo richiamare un elemento usando il suo id */
+
+#paragrafo{
+    color: brown;
+    margin: 70px;
+}
+
+/* Mentre usiamo il punto per richiamare un elemento usando la sua class */
+
+.paragrafoverde {
+    color: darkgreen;
+    margin: 70px;
+    text-decoration: underline;
+    line-height: 30px;
+}
+
+/* Puoi applicare più classi allo stesso elemento, ma se entrambi le classi hanno valori diversi della stessa regola, la classe applicata per ultima sovrascriverà quella precedente */
+
+.lineaSup {
+    text-decoration: overline;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    background-color: teal;
+}
+
+.dimensioniParagrafo{
+    border: 1px solid black;
+    width: 50%;
+    height: auto;
+    margin-right: 25%;
+    margin-left: 25%;
+    text-align: justify;
+    background-color: orangered;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.clearfix {
+    clear: both;
+}

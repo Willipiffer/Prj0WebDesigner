@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Lezione 6 - Tag Semantici</title>
+
+</head>
+
+
+<body>
+
+    <!-- Header è l'intestazione della pagina, che solitamente rimane statica su tutte le pagine del sito, contenente cose come il logo del sito ed il menu di navigazione. 
+        
+        Nav viene usato appunto per un set di link di navigazione -->
+
+
+    <header>
+        <div class="logo"><img src="./img/logo.jpg" alt="Logo"></div>
+    
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Chi Siamo</a></li>
+                <li><a href="">Servizi</a></li>
+                <li><a href="">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- article viene usato per delineare un articolo, cioè un testo che se estrapolato dal suo contesto continua ad avere senso, con un capo e coda. Ad esempio un blogpost, notizie, descrizione di prodotti, etc. -->
+
+    <article>
+
+    <h1>Lezione 6 - Tag Semantici</h1>
+    <p>Lorem ipsum, dolor sit <strong>amet consectetur</strong> adipisicing elit. Aliquid fuga quae numquam veniam molestiae ipsa accusamus provident, magni voluptates reprehenderit, iste reiciendis rem voluptatum ipsam, modi repellendus quo voluptas mollitia.</p>
+
+    <h2>Lorem ipsum</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea facilis ducimus obcaecati nostrum id impedit enim! Ex repellat doloremque quaerat officia veritatis corporis unde veniam, exercitationem, optio quisquam qui. Nisi!</p>
+
+    </article>
+
+
+    <!-- Raramente è possibile che l'header venga utilizzato dentro un tag article per stabilire la parte iniziale di un articolo -->
+
+
+    <article>
+        <header>
+            <h1>Intestazione dell'articolo</h1>
+            <p>Lorem, ipsum dolor sit amet <em>consectetur adipisicing</em>e elit. Officia, ut eveniet distinctio tenetur aliquam dolores atque mollitia culpa, fugit porro laboriosam. Nihil reprehenderit ab minima molestiae dolores natus delectus iure!</p>
+        </header>
+            <p>Resto dell'articolo Lorem ipsum dolor sit amet consectetur adipisicing elit. A natus asperiores necessitatibus eius nisi fugit dolorum soluta, consequatur, voluptatibus corrupti quibusdam dolores possimus nemo perspiciatis eaque aut in corporis deserunt.</p>
+    </article>
+
+
+    <!-- <main> viene usato per contenere i contenuti principali della pagina -->
+
+    <main>
+        <article>
+            <h1>Contenuto principale del sito</h1>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quod ducimus magni asperiores provident saepe reprehenderit explicabo ipsa quaerat labore sequi at ullam a minus nam nostrum corporis, et nesciunt necessitatibus suscipit, dolores numquam neque! Ea, vitae veniam a voluptatem mollitia quasi aut exercitationem quo quae cum veritatis omnis, perspiciatis repudiandae? Minima, modi corporis! Architecto natus eum dignissimos tenetur facere aperiam odio non culpa totam corrupti. Fugiat optio provident ab dolore tenetur deserunt commodi temporibus sit aperiam, odit porro eveniet consectetur ratione molestias? Provident nostrum, laborum expedita quod ullam quis, dolore incidunt placeat nam a praesentium enim? Sed delectus voluptatibus accusamus distinctio tempore consequuntur culpa, eligendi at repellat fugit ullam labore! Accusantium alias veritatis est eos consectetur expedita! Inventore natus facilis tenetur sapiente cum id alias quo quia! Mollitia, laboriosam earum aut dolorem optio porro tempora error, vel dolore odio officiis repudiandae alias amet quas explicabo suscipit aspernatur magnam. Voluptas at, ipsum illo cum minima praesentium quod possimus, non deleniti mollitia ipsa dignissimos magni hic culpa doloremque repellat. Veritatis, ut. Dolor praesentium qui quis! Perspiciatis, dolorum minus dolor eveniet suscipit nobis! Accusamus, assumenda hic distinctio modi debitis atque cum necessitatibus dolorum quod consectetur. Harum eaque beatae sequi est earum voluptatibus.
+        </article>
+    </main>
+
+
+    <!-- Il footer solitamente contiene informazioni generiche a piè di pagina, e come l'header rimane spesso uguale su tutte le pagine del sito. Come l'header, il footer può anche essere utilizzato in un articolo per chiuderlo (link per la condivisione, firma autore, fonti, etc.) -->
+    
+    <footer>
+        Informazioni a piè di pagina con link
+    </footer>
+
+    <article>
+        <footer>
+            Firma dell'autore, fonti, link, etc.
+        </footer>
+    </article>
+
+
+    <!-- Utilizzato raramente, il tag section viene usato per delineare sezioni diverse -->
+
+    <section>
+        <h2>Ingredienti Ricetta</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium porro necessitatibus perferendis, facere alias incidunt, mollitia blanditiis, voluptatum error corrupti nam nemo rerum maiores nisi earum? Illum delectus architecto temporibus?</p>
+    </section>
+
+    <section>
+        <h2>Preparazione</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt libero distinctio temporibus deserunt similique natus fuga facilis iste laudantium, optio magnam? Tenetur et dolorem magni officia soluta amet, nemo excepturi?</p>
+    </section>
+
+    <section>
+        <h2>Presentazione piatto</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolorum. Assumenda exercitationem perspiciatis odio tempore deserunt! Repudiandae vitae quis molestias minus cum, id consequuntur, rerum distinctio aperiam inventore iusto eos!</p>
+    </section>
+
+
+    <!-- <figure> viene usato per inserire un'immagine, possiamo anche utilizzare <figcaption> per aggiungere una didascalia all'immagine -->
+
+    <figure>
+        <img src="./img/immagineBiscotti.jpg" alt="biscotti croccanti">
+        <figcaption>Esempio di presentazione dei biscotti</figcaption>
+    </figure>
+
+
+</body>
+</html>

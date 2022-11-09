@@ -1,0 +1,39 @@
+.box {
+    font-size: 2rem;
+    background-color: red;
+}
+
+@media screen and (max-width: 600px) { /* Questa regola dice che fino a 600 px*/
+    .box {
+        color: blue;            /* Il colore del testo nel div box sarà blu */
+    }
+}
+
+@media screen and (min-width: 960px) { /* Questa regola dice che da 960px in su */
+    .box {
+        color: brown;            /* Il colore del testo nel div sarà verde */
+        background-color: blueviolet;     /* e il background viola*/
+    }
+}
+
+@media screen and (min-width: 1200px) { /* Da 1200px in su */
+    .box {
+        border: 10px solid orange; /* Avrà un bordo arancione */
+    }
+}
+
+/* Da notare che da 1200px in su, sia la regola con color: green che la regola con border: orange sono attive - più regole si sovrappongono se le loro condizioni sono soddisfatte. Se due regole modificano la stessa proprietà, l'ultima regola ha la precedenza come in classico stile CSS */
+
+@media screen and (min-width:800px) and (max-width:900px) { /* Possiamo mettere più condizioni, qui ad esempio abbiamo dato sia una min width che una max width */
+    body {
+        background-color: aquamarine;
+    }
+}
+
+
+
+@media screen and (orientation: portrait) { /* Questa regola si attiva se l'orientazione del device è in verticale (ovvero su device come telefoni e tablet)*/
+    body {
+        background-color: green;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina del Menu</title>
+    <style>
+
+            /* Dentro il tag style scriviamo in CSS, per cui i commenti si aprono con "/*" e si chiudono con */
+            /* CSS = Cascade Style Sheet, dove possiamo fornire delle regole di stile */
+
+            /* Forniremo regole attraverso l'utilizzo dell'id. In questo modo tutte le regole applicate all'id "menu" si applicheranno al tag ul e tutti i suoi "figli", ovvero le tag al suo interno (le li) */
+
+            /* La regola color modifica il colore del testo, list-style lo stile della lista */
+
+            #menu{
+                color: blue;
+                list-style: none;
+                display: block;
+                background-color: aqua;
+                height: 100px;
+                width: auto;
+            }
+
+            /* Possiamo anche richiamare tag direttamente, in questo caso le regole verranno applicati a tutti i tag di quel tipo nella pagina */
+            /* Con float: left sposto il tag selezionato a sinistra, con display: block creiamo un "blocchetto" attorno al testo trasformandolo in un elemento block anzichè inline, e con margin diamo un margine grande tot pixel attorno a questo blocco. In questo modo possiamo distanziare gli elementi della lista */
+
+            li{
+                float: left;
+                display: block;
+                margin: 7px 10px 17px 25px;
+            }
+
+            /* I link per default sono blu e sono sottolineati, ma utilizzando CSS possiamo cambiare queste regole di base e dare ai tag <a> un colore diverso e rimuovere la sottolineatura, ad esempio: */
+
+            a{
+                color: orange;
+                text-decoration: none;
+                display: block;
+                background-color: blue;
+            }
+
+    </style>
+</head>
+<body>
+    
+    <ul id="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./paginaChiSiamo.html">Chi Siamo</a></li>
+        <li><a href="./paginaCosaFacciamo.html">Cosa Facciamo</a></li>
+        <li><a href="./paginaDoveSiamo.html">Dove Siamo</a></li>
+    </ul>
+
+</body>
+</html>

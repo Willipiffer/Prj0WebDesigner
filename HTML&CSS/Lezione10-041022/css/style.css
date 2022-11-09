@@ -1,0 +1,33 @@
+* {
+    /* Possiamo risolvere il problema con il padding usando il selettore * (per indicare tutto) e utilizzando la proprietà box-sizing: border-box per specificare il significato delle proprietà di grandezza ed altezza e fare in modo che il browser visualizzi correttamente valori di padding, border, margin, etc.*/
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 25%;
+    height: 200px;
+    /* In flexbox, i valori di margin, padding, border, etc. vengono AGGIUNTI alle dimensioni dell'elemento in sè - questo può essere un enorme problema per calcolare bene le dimensioni che vogliamo */
+    padding: 20px;
+    border: 1px solid black;
+}
+
+#box-1 {
+    background: blue;
+}
+
+#box-2 {
+    background: red;
+}
+
+#box-3 {
+    background: yellow;
+}
+
+#box-4 {
+    background: green;
+}

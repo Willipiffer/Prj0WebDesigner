@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+<body>
+    
+    <h1>Oggetto studente (notazione letterale)</h1>
+
+    <div id="demo"></div>
+
+    <script>
+
+        // CREARE OGGETTI
+
+        //Gli oggetti sono entità complesse, in pratica dei contenitori di elementi diversi tra loro, che costituiscono un modello di entità presente nel mondo reale
+
+        // Definisco un oggetto con notazione letterale
+
+        // Da notare che è necessario utilizzare this. per specificare proprietà all'interno dell'oggetto - "this" indica il contenitore più vicino, cioè l'oggetto stesso
+
+        var studente = {
+            nome: "Marco",
+            cognome: "Tani",
+            eta: 30,
+            matricola: 123,
+            presenza: true,
+            materie: ["Javascript", "Java", "Angular", "HTML", "CSS"],
+            zaino: {
+                marca: "Invicta",
+                capacitaInLitri: 20,
+                contenuto: ["Penna", "Portatile", "Mouse", "Tastiera"]
+            },
+            presentati: function(){
+                console.log("Ciao, mi chiamo " + this.nome + " " + this.cognome);
+                var msg = "Ciao, mi chiamo " + this.nome + " " + this.cognome + ".<br>Sto studiando le seguenti materie:";
+
+                for(var i = 0; i < this.materie.length; i++){
+                    msg += "<li>" + this.materie[i] + "</li>";
+                }
+
+                var msgZaino = "<br>Nello zaino ho questo:";
+
+                for(var i = 0; i < this.zaino.contenuto.length; i++){
+                    msgZaino += "<li>" + this.zaino.contenuto[i] + "</li>";
+                }
+
+                return msg + msgZaino;
+            }
+        }
+
+        // Possiamo poi richiamare le proprietà e metodi dell'oggetto al di fuori dell'oggetto
+
+        console.log(studente.nome, studente.eta, studente.presenza);
+
+        var demo = document.getElementById("demo");
+        demo.innerHTML = studente.presentati();
+
+
+
+
+        // Costruire l'oggetto "persona" con le seguenti proprietà:
+
+        // Nome, Cognome, Corso, Voto, Presentati(metodo), controllaEsame(metodo)
+        // controllaEsame -> controlla se il voto è inferiore a 18 e stampa "mi dispiace, non hai superato l'esame"; se superiore a 18 stamperà "complimenti, hai superato l'esame con il seguente voto: voto #".
+
+        // La stampa di queste stringhe deve avvenire nel documento HTML
+
+
+        var immagini = [
+            {
+                percorso: "./.....",
+                titolo: "Sport acquatico",
+                alt: "Persone che nuotano in piscina",
+                mostra: false
+
+            },
+
+            {
+                percorso: "./.....",
+                titolo: "Sport di gruppo",
+                alt: "Persone che giocano a pallavolo",
+                mostra: true
+            }
+
+        ]
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 5 - Collegare un CSS</title>
+
+    <!-- Collego un file CSS, che avrà l'estensione .css -->
+
+    <!-- Questo è un file reset, utilizzato per rimuovere tutte le regole prefabbricate dei browser così da darci più libertà quando modifichiamo lo stile delle nostre pagine
+    ATTENZIONE: IL FILE RESET VA COLLEGATO PRIMA DEL FILE DI STYLE-->
+
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <!-- Possiamo scrivere tutte le regole di stile nel file di CSS, e semplicemente collegare questo file a tutte le pagine che vogliamo ne facciano utilizzo -->
+
+</head>
+
+<body>
+
+    
+<h1>Lezione 5 - Collegare un file CSS ad una pagina HTML</h1>
+
+<p id="paragrafo">In questa pagina spieghiamo come collegare un file CSS ad una pagina HTML</p>
+
+<!-- Le class funzionano come le id, ma possono essere utilizzate per più elementi -->
+
+<p class="paragrafoverde">In questa pagina speghiamo anche come azzerare le regole del browser utilizzando l'attributo class</p>
+
+<!-- Possiamo assegnare più classi ad un solo elemento. -->
+
+<ul class="paragrafoverde lineaSup">
+    <li>Prova</li>
+    <li>Tu</li>
+    <li>Adesso!</li>
+</ul>
+
+
+<!-- NUOVO TAG <div> FONDAMENTALE. Usato come "contenitore" semplice che ci permette di creare strutture all'interno della pagina. E' il tag più utilizzato in assoluto -->
+
+    <div class="container">
+
+        <h1>Come collegare un file JS</h1>
+
+        <div class="dimensioniParagrafo">
+        <p>In questo paragrafo ci occuperemo di dire come è possibile collegare un file Javascript alla nostra pagina. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, unde! Facilis veritatis illum explicabo ullam consequatur quam temporibus quod, vero repellat recusandae, consequuntur tenetur incidunt ad pariatur cupiditate iusto voluptatum! Fugit voluptatem totam quam ea nihil, nostrum eum commodi beatae rem magnam molestias natus cum veritatis laudantium repellat? Asperiores minima architecto deserunt animi quas consequatur minus error ipsa beatae est earum voluptate nulla fuga sint, dolorem dolore unde? Tempore accusamus qui alias doloremque nam. Itaque ipsum totam doloribus ducimus iure ullam repudiandae et perspiciatis quod dolore fugit, quidem magnam molestiae vero ut deleniti porro sed aliquid ratione cumque eum? Veniam suscipit expedita nobis in vero maiores praesentium debitis. Optio dolorum ad at eaque repudiandae incidunt quis quaerat. Illum accusamus voluptatibus alias, totam ratione dignissimos non impedit ipsum odit quaerat cumque nam maiores corporis quidem dolor delectus ut saepe debitis. Neque libero similique excepturi. Labore fuga impedit itaque iure expedita cumque?</p>
+
+        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam est aperiam commodi suscipit, qui nam sint repellat reiciendis earum, consequuntur deserunt, et dolor delectus explicabo consequatur. Iure explicabo rerum temporibus ipsam sapiente dolores praesentium et eum itaque natus, animi eos saepe reprehenderit harum nobis repellat, sed ab corporis quod exercitationem? Modi doloribus similique aliquid, veritatis ullam nam veniam est ratione ea nisi distinctio reiciendis labore obcaecati voluptate ut. Aut est ut vero ea minima minus molestias beatae ipsa, totam veritatis voluptatibus maiores sed! Voluptate, molestias at quod vel cum ratione expedita inventore minima facilis, eum maiores repellat reiciendis illo nesciunt. Culpa deserunt repellendus maiores? Quod laudantium rem consequatur nisi tempore quae nam aspernatur eos nulla tempora possimus provident dignissimos commodi ipsa aut magnam, dolor odio recusandae reiciendis, laboriosam esse voluptate ducimus maxime quam. Ullam voluptatum beatae deserunt. Culpa nobis sapiente consequatur nesciunt quas maiores numquam quos facilis rem maxime!</p>
+        </div>
+    </div>
+
+    <div class="container mt-2">
+
+        <h1>Esercizio di prova</h1>
+        <div class="mt-2"><p>Inserire quattro div di colore diverso. Primo caso (da fare all'interno di un div class=container) posizione in orizzontale, sulla stessa riga , i 4 div, di colore diverso tra loro, con un bordo ma equispaziati</p>
+        
+        <p>Secondo caso i 4 div saranno posizionati due su una riga e due su un'altra riga</p>
+    
+        <p>Utilizzare tra un div e l'altro un div clearfix</p></div>
+
+        <!-- Un div clearfix è un div vuoto che viene utilizzato per "pulire" le regole da quel momento, utilizzando l'attributo "clear: both" in CSS-->
+    </div>
+
+
+
+</body>
+</html>
